@@ -1,0 +1,14 @@
+[Unit]
+Description=ZNT Service
+After=syslog.target
+
+[Service]
+User=mdigi
+WorkingDirectory=/opt/apps/znt/
+ExecStart=/usr/bin/java -jar znt.jar
+SuccessExitStatus=143
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
