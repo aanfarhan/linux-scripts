@@ -1,11 +1,11 @@
 [Unit]
-Description=ZNT Service
+Description=Program Service
 After=syslog.target
 
 [Service]
-User=mdigi
-WorkingDirectory=/opt/apps/znt/
-ExecStart=/usr/bin/java -jar znt.jar
+User=root
+WorkingDirectory=/opt/apps/workspace/
+ExecStart=/usr/bin/java -jar program.jar
 SuccessExitStatus=143
 Restart=always
 RestartSec=30
